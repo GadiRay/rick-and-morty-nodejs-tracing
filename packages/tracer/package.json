@@ -1,0 +1,24 @@
+{
+    "name": "@nodejs-tracing/tracer",
+    "version": "1.0.0",
+    "description": "",
+    "main": "tracer.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@opentelemetry/api": "^0.18.0",
+        "@opentelemetry/exporter-jaeger": "^0.18.0",
+        "@opentelemetry/instrumentation": "^0.18.0",
+        "@opentelemetry/node": "^0.18.0",
+        "@opentelemetry/plugin-express": "^0.14.0",
+        "@opentelemetry/plugin-http": "^0.18.0",
+        "@opentelemetry/plugin-pg": "^0.14.0",
+        "@opentelemetry/plugin-redis": "^0.14.0",
+        "@opentelemetry/propagator-b3": "^0.18.2",
+        "@opentelemetry/tracing": "^0.18.0"
+    }
+}

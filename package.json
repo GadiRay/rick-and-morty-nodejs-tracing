@@ -1,0 +1,31 @@
+{
+  "name": "rick-and-morty-nodejs-tracing",
+  "version": "1.0.0",
+  "description": "Demo project to demonstrate NodeJS tracing",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "stop:docker-compose": "docker-compose stop",
+    "start:docker-compose": "docker-compose up -d",
+    "start:server": "node services/server/index.js",
+    "start:metadata": "node services/metadata/index.js",
+    "start": "npm run start:docker-compose && concurrently \"npm run start:server\" \"npm run start:metadata\" -n \"server,metadata\" -c \"bgBlue.bold,bgMagenta.bold\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GadiRay/rick-and-morty-nodejs-tracing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GadiRay/rick-and-morty-nodejs-tracing/issues"
+  },
+  "homepage": "https://github.com/GadiRay/rick-and-morty-nodejs-tracing#readme",
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  }
+}
